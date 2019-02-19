@@ -1,12 +1,14 @@
 const express = require('express');
 const router = express.Router();
-const {getMetaData} = require(`../libraries/ffmpeg`)
+const {getInfo} = require(`../libraries/downloader`)
 /* GET users listing. */
 router.get('/', async (req, res, next) => {
     try {
+        console.log(req)
         const {url} = req.query
-        const meta = await getMetaData({url})
-        res.status(200)
+        console.log(url)
+        const meta = await getInfo(url)
+        console.log(meta)
         res.json(meta)
     }
     catch (e) {

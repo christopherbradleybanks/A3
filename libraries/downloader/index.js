@@ -64,10 +64,10 @@ const isDownloadable = async ({downloadFrom}) => {
     }
 }
 
-isDownloadable({downloadFrom: `https://www.youtube.com/watch?v=O1M_iqSBEpA`}).then((downloadable) => {
-        console.log(`is downloadable ? `, downloadable)
-
-    })
+// isDownloadable({downloadFrom: `https://www.youtube.com/watch?v=O1M_iqSBEpA`}).then((downloadable) => {
+//         console.log(`is downloadable ? `, downloadable)
+//
+//     })
 
 module.exports = {
     downloadFile,

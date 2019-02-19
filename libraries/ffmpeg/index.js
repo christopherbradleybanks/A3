@@ -26,6 +26,7 @@ const getDurationFromStream = async ({url}) => {
 }
 
 const getMetaData = async ({url}) => {
+    console.log('arrived here: \n', url)
     try {
         return new Promise((resolve, reject) => {
             let proc = ffmpeg()
